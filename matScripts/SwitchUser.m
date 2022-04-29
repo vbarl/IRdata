@@ -17,8 +17,6 @@ function paths = SwitchUser(wfolder, ihabit, iroughness)
 switch whoami
   case 'barlakas'
      %- Location of ascii data to be converted
-     %paths.habit = ['/home/barlakas/WORKAREA/IRdata/Yang2013/', ...
-     %               wfolder, ihabit, iroughness];
      paths.habit = ['/home/barlakas/Documents/Dendrite/ScatData/Yang2013/', ...
                     wfolder, ihabit, iroughness];
      
@@ -28,7 +26,6 @@ switch whoami
      
      %- Output path
      paths.output = ['/home/barlakas/WORKAREA/IRdata/SSD/Yang2013/'];
-     %paths.output = ['/home/barlakas/WORKAREA/IRdata/SSD/Yang2013/', wfolder];
      
      %- Creates main output folder 
      if ~exist(paths.output, 'dir')
