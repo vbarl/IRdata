@@ -20,19 +20,27 @@ switch whoami
      paths.habit = ['/home/barlakas/Documents/Dendrite/ScatData/Yang2013/', ...
                     wfolder, ihabit, iroughness];
      
-     if ~exist(paths.habit, 'dir')
-       error('Wrong path was given');
-     end
-     
      %- Output path
      paths.output = ['/home/barlakas/WORKAREA/IRdata/SSD/Yang2013/'];
      
-     %- Creates main output folder 
-     if ~exist(paths.output, 'dir')
-       mkdir(paths.output);
-     end
   case 'patrick'
-     disp('Include paths');
+     %- Location of ascii data to be converted
+     paths.habit = ['/home/patrick/Data/Yang2016/YangFormat/', ...
+                    wfolder, ihabit, iroughness];
+     
+     %- Output path
+     paths.output = ['/home/patrick/Data/Yang2016/ArtsFormat/'];
+
   otherwise
      error('Uknown user');
+end
+
+
+if ~exist(paths.habit, 'dir')
+    error('Wrong path for input was given');
+end
+
+%- Create main output folder?
+if ~exist(paths.output, 'dir')
+    mkdir(paths.output);
 end
