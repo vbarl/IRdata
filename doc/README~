@@ -1,0 +1,49 @@
+------README file for the ice particle database------
+This directory contains the single scattering properties
+of ice particles assuming various shapes and particle
+surface roughness from 0.2 um to 15.25 um and from 16.4 um
+to 99.0 um (merged together) in the ARTS xml format. They
+correspond to the updated ice single scattering properties
+(see [2]).
+
+The scripts that were used to convert Ping Yang's ascii files to these
+ARTS xml format are found at https://github.com/vbarl/IRdata
+
+Names in parenthesis denote the original names from the
+data given by Yang P.
+
+1. Nine habits:
+
+   1). hexagonal column            (single_column)
+   2). plate                       (plate)
+   3). hollow column               (HC)
+   4). droxtal                     (droxtal)
+   5). hollow bullet rossette      (HBR)
+   6). solid bullet rossette       (SBR)
+   7). 8-element column aggregate  (8_columns)
+   8). 5-element plate aggregate   (5_plates)
+   9). 10-element plate aggregate  (10_plates).
+
+2. Each type of shape has three degrees of roughness: 
+
+   1). smooth           (Rough000)
+   2). moderately rough (Rough003)
+   3). severely rough   (Rough050).
+
+3. Wavelength range: 
+   0.2~15.25 um, 396 wavelengths; 
+   16.4~99.0 um, 49 wavelengths.
+
+4. Paricle size range: 
+   2.0~10000 um, 189 sizes.
+
+Reference:
+
+   [1]. Yang, P., L. Bi, B.A. Baum, K.-N. Liou, G.W. Kattawar, M.I. Mishchenko, 
+   and B. Cole, 2013: Spectrally consistent scattering, absorption, and 
+   polarization properties of atmospheric ice crystals at wavelengths from 
+   0.2 µm to 100µm, J. Atmos. Sci., 70, 330-347.
+   
+   [2]. Bi, L., and P. Yang, 2017: Improved ice particle optical property 
+   simulations in the ultraviolet to far-infrared regime, 
+   J. Quant. Spectrosc. Radiat. Transfer, 189, 228-237.

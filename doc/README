@@ -1,0 +1,59 @@
+------ README file for the ice particle database ------
+
+This folder contains the single scattering properties of ice particles
+from [1] and [2], converted to the ARTS xml format. The data
+correspond to various shapes and particle surface roughness, covering
+wavelengths between 0.2 and 99 um (the original data come in two parts
+(0.2-15.25 um and 16.4-99.0 um), these are here merged).
+
+Please cite, at least, [2] when using these data in publications. 
+
+The data are here stored in the ARTS (v2.4-v2.6) XML format for single
+scattering data. See the file xmlload_test.py for a small
+demonstration on how to import the data into Python, and how to there
+explore the data format.
+
+The scripts that were used to convert Yang et al.'s ascii files to these
+ARTS xml format are found at https://github.com/vbarl/IRdata
+The conversion of the data was done at Chalmers University of
+Technology, by Vasilis Barlakas, Patrick Eriksson and Maryam Jamali.
+
+A summary of the data (names in parenthesis denote the original names
+of the habits):
+
+1. Nine habits:
+
+   1). hexagonal column            (single_column)
+   2). plate                       (plate)
+   3). hollow column               (HC)
+   4). droxtal                     (droxtal)
+   5). hollow bullet rossette      (HBR)
+   6). solid bullet rossette       (SBR)
+   7). 8-element column aggregate  (8_columns)
+   8). 5-element plate aggregate   (5_plates)
+   9). 10-element plate aggregate  (10_plates)
+
+2. Each type of shape has three degrees of roughness: 
+
+   1). smooth           (Rough000)
+   2). moderately rough (Rough003)
+   3). severely rough   (Rough050)
+
+3. Wavelength range: 
+   0.2~15.25 um, 396 wavelengths
+   16.4~99.0 um, 49 wavelengths
+
+4. Paricle size range: 
+   2.0~10000 um, 189 sizes
+
+
+References:
+
+   [1]. Yang, P., L. Bi, B.A. Baum, K.-N. Liou, G.W. Kattawar, M.I. Mishchenko, 
+   and B. Cole, 2013: Spectrally consistent scattering, absorption, and 
+   polarization properties of atmospheric ice crystals at wavelengths from 
+   0.2 µm to 100µm, J. Atmos. Sci., 70, 330-347.
+   
+   [2]. Bi, L., and P. Yang, 2017: Improved ice particle optical property 
+   simulations in the ultraviolet to far-infrared regime, 
+   J. Quant. Spectrosc. Radiat. Transfer, 189, 228-237.

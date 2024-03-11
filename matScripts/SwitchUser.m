@@ -25,11 +25,11 @@ switch whoami
      
   case 'patrick'
      %- Location of ascii data to be converted
-     paths.habit = ['/home/patrick/Data/Yang2016/YangFormat/', ...
+     paths.habit = ['/home/patrick/Tmp/Yang2016/YangFormat/', ...
                     wfolder, ihabit, iroughness];
      
      %- Output path
-     paths.output = ['/home/patrick/Data/Yang2016/ArtsFormat/'];
+     paths.output = ['/home/patrick/Tmp/Yang2016/ArtsFormat/'];
 
   otherwise
      error('Uknown user');
